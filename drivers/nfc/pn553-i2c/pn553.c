@@ -1613,7 +1613,7 @@ static int pn544_probe(struct i2c_client *client,
 #else
     struct device_node *node = client->dev.of_node;
 	  //#ifdef OPLUS_FEATURE_CONNFCSOFT
-	  CHECK_NFC_CHIP(PN557);
+	  //CHECK_NFC_CHIP(PN557);
 	  //#endif /* OPLUS_FEATURE_CONNFCSOFT */
     dev_err(&client->dev,
         "nfc-nci probe: start\n");

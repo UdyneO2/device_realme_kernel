@@ -2163,11 +2163,11 @@ int oplus_chg_init(struct oplus_chg_chip *chip)
 
 #ifdef CONFIG_FB
 	chip->chg_fb_notify.notifier_call = fb_notifier_callback;
-#ifdef CONFIG_DRM_MSM
-	rc = msm_drm_register_client(&chip->chg_fb_notify);
-#else
+//#ifdef CONFIG_DRM_MSM
+	//rc = msm_drm_register_client(&chip->chg_fb_notify);
+//#else
 	rc = fb_register_client(&chip->chg_fb_notify);
-#endif /*CONFIG_DRM_MSM*/
+//#endif /*CONFIG_DRM_MSM*/
 	if (rc) {
 		pr_err("Unable to register chg_fb_notify: %d\n", rc);
 	}

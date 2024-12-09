@@ -645,12 +645,12 @@ static int __init wakelock_statistics_function_init(void)
 	if (retval) {
 		kobject_put(wakelock_profiler);
 		pr_info("[%s] failed to create a sysfs group %d\n", __func__, retval);
-	}
+	}/*
 
 	retval = msm_drm_register_client(&ws_fb_notify_block);
 	if (retval) {
 		pr_info("[%s] register drm notifier failed.\n", __func__);
-	}
+	}*/
 
 	return 0;
 }

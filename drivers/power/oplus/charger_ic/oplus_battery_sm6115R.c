@@ -13693,7 +13693,7 @@ ntcvolt_get_done:
 	return batt_btb_tmp;
 }
 
-void oplus_set_typec_sinkonly()
+int oplus_set_typec_sinkonly(void)
 {
 	int rc;
 	struct smb_charger *chg = NULL;

@@ -34,8 +34,9 @@
  * assume that it's not available and its header file is missing and that we
  * should use PKCS#7 instead.  Switching to the older PKCS#7 format restricts
  * the options we have on specifying the X.509 certificate we want.
- *
- * Further, older versions of OpenSSL don't support manually adding signers to
+ **/
+ #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+ /* Further, older versions of OpenSSL don't support manually adding signers to
  * the PKCS#7 message so have to accept that we get a certificate included in
  * the signature message.  Nor do such older versions of OpenSSL support
  * signing with anything other than SHA1 - so we're stuck with that if such is
